@@ -22,6 +22,7 @@ jobs:
     steps:
       - name: prep runner
         run: |
+          npm init
           npm install
 
       - name: checkout code
