@@ -15,15 +15,9 @@ jobs:
   update-docs:
     name: Update Atlassian Docs
     permissions:
-      contents: write
-      packages: read
-      statuses: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
-      - name: prep runner
-        run: |
-          npm init
-          npm install
 
       - name: checkout code
         uses: actions/checkout@v3
