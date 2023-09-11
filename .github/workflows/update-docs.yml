@@ -14,10 +14,10 @@ run-name: ${{ inputs.branch }}
 jobs:
   update-docs:
     name: Update Atlassian Docs
-      permissions:
-        contents: write
-        packages: read
-        statuses: write
+    permissions:
+      contents: write
+      packages: read
+      statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: prep runner
