@@ -31,7 +31,7 @@ jobs:
       - name: publish to confluence
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
-          from: '/docs/device-types.md'
+          from: 'device-types.md'
           to: '3755081907'
           cloud: geappliances
           user: ryan.bell@geappliances.com
