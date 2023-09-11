@@ -22,7 +22,7 @@ jobs:
         uses: markdown-confluence/publish-action@v5
         with:
           folderToPublish: docs
-          confluenceBaseUrl: https://geappliances.atlassian.net/
+          confluenceBaseUrl: https://geappliances.atlassian.net/wiki/spaces/SHSCT
           confluenceParentId: 3755081907
           atlassianUserName: ${{ secrets.ATLASSIAN_USERNAME }}
           atlassianApiToken: ${{ secrets.ATLASSIAN_API_TOKEN }}
