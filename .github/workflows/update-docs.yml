@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: '16.x'
 
-      - name: clean install
-        run: npm ci
+      # - name: clean install
+      #   run: npm ci
       
       - name: publish to confluence
         uses: markdown-confluence/publish-action@main
