@@ -1,0 +1,28 @@
+name: Update Atlassian Docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        type: string
+        description: feature branch to deploy
+        required: true 
+
+run-name: ${{ inputs.branch }}
+
+jobs:
+  update-docs:
+    name: Update Atlassian Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      
+      - name: publish to confluence
+        uses: markdown-confluence/publish@v1
+        with:
+          folderToPublish: docs
+          confluenceBaseUrl: https://geappliances.atlassian.net/
+          confluenceParentId: 3755081907
+          atlassianUserName: ${{ secrets.ATLASSIAN_USERNAME }}
+          atlassianApiToken: ${{ secrets.ATLASSIAN_API_TOKEN }}

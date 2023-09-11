@@ -1,0 +1,2 @@
+# Automated Documentation
+The goal of this is to automatically create/edit a Confluence page based on markdown files that contain our docs in a repository. This will allow business users to view the most current information without navigating to Github and automatically update it when changes are made.
