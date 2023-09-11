@@ -34,5 +34,5 @@ jobs:
           from: 'device-types.md'
           to: '3755081907'
           cloud: geappliances
-          user: ryan.bell@geappliances.com
+          user: ${{ secrets.ATLASSIAN_USERNAME }}
           token: ${{ secrets.ATLASSIAN_API_TOKEN }}
