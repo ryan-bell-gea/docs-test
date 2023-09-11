@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: publish to confluence
-        uses: markdown-confluence/publish@v1
+        uses: markdown-confluence/publish-action@v5
         with:
           folderToPublish: docs
           confluenceBaseUrl: https://geappliances.atlassian.net/
