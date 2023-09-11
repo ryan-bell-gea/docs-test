@@ -1,0 +1,6 @@
+{
+    "confluenceBaseUrl": "https://geappliances.atlassian.net/wiki/spaces/SHSCT",
+    "confluenceParentId": "3755081907",
+    "folderToPublish": ".",
+    "contentRoot": "/github/workspace/docs/"
+  }

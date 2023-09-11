@@ -29,10 +29,7 @@ jobs:
         uses: actions/checkout@v3
       
       - name: publish to confluence
-        uses: markdown-confluence/publish-action@v5
+        uses: markdown-confluence/publish-action@main
         with:
-          folderToPublish: "docs"
-          confluenceBaseUrl: https://geappliances.atlassian.net/wiki/spaces/SHSCT
-          confluenceParentId: 3755081907
           atlassianUserName: ${{ secrets.ATLASSIAN_USERNAME }}
           atlassianApiToken: ${{ secrets.ATLASSIAN_API_TOKEN }}
