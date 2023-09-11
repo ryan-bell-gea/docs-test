@@ -11,24 +11,22 @@ on:
 
 run-name: ${{ inputs.branch }}
 
+permissions:
+      contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   update-docs:
     name: Update Atlassian Docs
-    permissions:
-      contents: read
+    
     runs-on: ubuntu-latest
     steps:
 
       - name: checkout code
         uses: actions/checkout@v3
-
-      - name: setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-
-      # - name: clean install
-      #   run: npm ci
       
       - name: publish to confluence
         uses: markdown-confluence/publish-action@main
